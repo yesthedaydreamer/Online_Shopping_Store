@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <style>
+        body {
+     
+            background-size: cover; 
+            width: 1000px; 
+    background-image: url("../static/welcome1.jpg");
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+  
+        
+        .container {
+            color: purple;
+            position: absolute;
+            top: 25%;
+            font-family: 'Courier New', Courier, monospace;
+            background: none;
+            left: 40%;
+        }
+        
+        .container h1 {
+          
+            width: 50%;
+            background: none;
+            display: inline-block;
+            font-size: 30px;
+            border-bottom: 3px solid purple;
+            margin-bottom: 15px;
+            padding: 20px 0;
+            outline: none;
+            font-family: 'Courier New', Courier, monospace;
+           
+        }
+        
+        .box {
+            width: 100%;
+            margin: 22px 0px;
+        }
+        
+        .box input {
+            background: none;
+            width: 100%;
+            padding: 5px 10px;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: rgb(10, 10, 10);
+            border-bottom: 3px solid purple;
+        }
+        
+       
+        a{
+            text-decoration: none;
+            color:purple;
+        }
+
+    
+
+        .btn {
+            color: purple;
+            cursor: pointer;
+            outline: none;
+            margin: 12px 0;
+            padding: 10px 31px;
+            border-radius: 17px;
+            border-color: purple;
+            font-size: 18px;
+            background: none;
+            font-weight: bold;
+            transition: all 300ms ease;
+font-family: 'Courier New', Courier, monospace;
+}
+        
+        .btn:hover {
+          
+            color: purple;
+            transform: translateY(1px);
+           text-decoration: none;
+           font-size: 1.5em;
+           box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+              0 1px 1px 0 rgba(0,0,0,0.09);
+            background: white;
+        }
+
+        .footers{
+    display: block;
+    margin-top: 500px;
+    margin-left: 630px;
+    width:36%
+}
+    </style>
+</head>
+
+<body>
+   
+    <div class="container">
+        <h1>Log In</h1>
+       
+        <!-- <div class="box">
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label for="username"></label>
+                    <input type="text" maxlength="11" class="form-control" name="myuser" aria-describedby="emailHelp"  placeholder="Enter Your username" required>
+                    
+                </div>
+         </div> -->
+         <div class="box">
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp"  placeholder="Enter Your Email" required>
+                    
+                </div>
+         </div>
+         
+         <div class="box">
+                <div class="form-group">
+                    <label for="password"></label>
+                    <input type="password" maxlength="23" class="form-control" id="password" name="password" placeholder="Enter Your Password" required>
+                </div>
+        </div>
+       
+
+               <button type="submit" class="btn">Login</button>
+          
+               <button type="submit" class="btn"><a href="/signup">Register</a></button>
+             
+
+             </form> 
+        </div>
+        <div class="footers">
+            <h3 style="color:red"><%= title %></h3>  
+        </div>
+    
+
+  </body>

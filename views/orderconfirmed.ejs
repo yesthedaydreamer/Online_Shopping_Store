@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+    body{
+         background-size: cover; 
+   
+         background-image: url("../static/order.jpg");
+         background-size: cover;
+      
+         background-repeat: no-repeat;
+         background-attachment: fixed; 
+        }
+
+        .table{
+          border-style:2px solid black;
+        }
+      
+        
+
+        .btn {
+                    color: purple;
+                 
+                    cursor: pointer;
+                    outline: none;
+                    margin: 12px 0;
+                    padding: 10px 31px;
+                    border-radius: 17px;
+                    border-color: purple;
+                    font-size: 18px;
+                    background: none;
+                    font-weight: bold;
+                    transition: all 300ms ease;
+                  font-family: 'Courier New', Courier, monospace;
+           
+               
+        }
+        
+              a{
+                    text-decoration: none;
+                    color:purple;
+                }
+
+                a:hover{
+                  text-decoration: none;
+                }
+                
+                .btn:hover {
+                  
+                    color: purple;
+                    transform: translateY(1px);
+                   text-decoration: none;
+                   font-size: 1.5em;
+                   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+                      0 1px 1px 0 rgba(0,0,0,0.09);
+                    background: white;
+                }
+
+                
+.aligncenter{
+    text-align: center;
+    margin: 10px auto 20px;
+    display: block;
+
+}
+               
+    
+</style>
+
+</head>
+
+
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"> Order - Id</th>
+        <th scope="col">Customer Name</th>
+       
+        <th scope="col">Product Name</th>
+        <th scope="col">Size</th>
+       
+      </tr>
+    </thead>
+<tbody>
+      <% buyer.forEach(buyer  => { %>
+      <tr>
+        <th scope="row"><%= buyer._id%> </th>
+        <td> <%= buyer.custname%></td>
+     
+        <td> <%= buyer.product %></td>
+        <td> <%= buyer.size%></td>
+       
+      </tr>
+      <% }) %> 
+    </tbody> 
+  </table>
+  <!-- <div class="aligncenter">
+  <button type="submit" class="btn"> <a href="/">Go Back To Home page </a></button>  
+</div> -->
+</body>
+</html>
